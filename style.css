@@ -1,213 +1,194 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca; min-height: 16.0px}
-    span.s1 {font-kerning: none; background-color: #171818}
-    span.s2 {font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">/* General Styles &amp; Aloha Theme */</span></p>
-<p class="p1"><span class="s1">body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'Inter', sans-serif; /* 기본 폰트 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>scroll-behavior: smooth;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">.font-pacifico {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'Pacifico', cursive; /* 헤더 제목 등 포인트 폰트 */</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">.section-title {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 2.25rem; /* 36px */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 700;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 2.5rem; /* 40px */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: relative;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding-bottom: 0.5rem;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">.section-title::after { /* 섹션 제목 아래 장식선 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>content: '';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: absolute;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>bottom: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>left: 50%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transform: translateX(-50%);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 80px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>height: 4px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #f59e0b; /* Amber 500 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 2px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">/* Header &amp; Navigation */</span></p>
-<p class="p1"><span class="s1">header nav a {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 600;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 1.1rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 0.5rem 0.75rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 0.375rem; /* rounded-md */</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">header nav a:hover, header nav a.active-nav { /* 현재 페이지 표시용 (JS로 추가 필요) */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: rgba(255, 255, 255, 0.2);</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">/* Hero Section Animations (index.html) */</span></p>
-<p class="p1"><span class="s1">@keyframes fadeInDown {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>from { opacity: 0; transform: translateY(-20px); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>to { opacity: 1; transform: translateY(0); }</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">@keyframes fadeInUp {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>from { opacity: 0; transform: translateY(20px); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>to { opacity: 1; transform: translateY(0); }</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.animate-fade-in-up { animation: fadeInUp 1s ease-out 0.5s forwards; } /* 0.5s delay */</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">@keyframes bounceSlow {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>0%, 20%, 50%, 80%, 100% {transform: translateY(0);}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>40% {transform: translateY(-15px);}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>60% {transform: translateY(-7px);}</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.animate-bounce-slow {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>animation: bounceSlow 2s infinite 1s; /* 1s delay before starting */</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">/* Tropical Card Style (index.html) */</span></p>
-<p class="p1"><span class="s1">.card-tropical {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 0.75rem; /* rounded-xl */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>overflow: hidden; /* Ensures image corners are rounded */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: transform 0.3s ease, box-shadow 0.3s ease;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.card-tropical:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transform: translateY(-5px);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.card-title-tropical {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 1.5rem; /* 24px */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 600;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #0d9488; /* teal-700 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 0.75rem; /* 12px */</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">/* Itinerary Card Style (itinerary.html) */</span></p>
-<p class="p1"><span class="s1">.card-tropical-itinerary {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 0.75rem; /* rounded-xl */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>overflow: hidden;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.itinerary-day-header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 1rem 1.5rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid #e5e7eb; /* gray-200 */</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.activity-options, .landmark-info {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 1.5rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 1rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #f0fdfa; /* emerald-50 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 0.5rem; /* rounded-lg */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-left: 4px solid #10b981; /* emerald-500 */</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.landmark-info {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-left-color: #3b82f6; /* blue-500 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #eff6ff; /* blue-50 */</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">/* Food Card Style (food.html) */</span></p>
-<p class="p1"><span class="s1">.card-food {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #fffbeb; /* amber-50 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 0.75rem; /* rounded-xl */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.07), 0 3px 5px -2px rgba(0, 0, 0, 0.04);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>overflow: hidden;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: transform 0.3s ease;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.card-food:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transform: scale(1.03);</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.food-image {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>height: 14rem; /* 224px */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>object-fit: cover;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: filter 0.3s ease;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.card-food:hover .food-image {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>filter: brightness(1.1);</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.food-title {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 1.375rem; /* 22px */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 600;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #92400e; /* amber-800 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 0.5rem;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">/* Tips &amp; Culture Card Style (tips.html) */</span></p>
-<p class="p1"><span class="s1">.tip-card {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #ecfdf5; /* green-50 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 1.5rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 0.75rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-left: 5px solid #22c55e; /* green-500 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 4px 8px rgba(0,0,0,0.05);</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.tip-title {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 1.25rem; /* 20px */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: 600;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #15803d; /* green-700 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 0.75rem;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.culture-card {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 1.5rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 0.75rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 6px 12px rgba(0,0,0,0.08);</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.culture-card .tip-title { /* Reuse tip-title style */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #0d9488; /* teal-700 */</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">/* Footer */</span></p>
-<p class="p1"><span class="s1">footer {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* background-image: linear-gradient(to right, #0d9488, #0f766e); */ /* Teal gradient */</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">/* Responsive Adjustments */</span></p>
-<p class="p1"><span class="s1">@media (max-width: 768px) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.section-title {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>font-size: 1.875rem; /* 30px */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header nav ul {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>flex-direction: column;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>space-y-2;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>space-x-0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header nav li a {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>display: block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">/* Add a subtle tropical background pattern if desired, using CSS gradients or SVG */</span></p>
-<p class="p1"><span class="s1">/* For example:</span></p>
-<p class="p1"><span class="s1">body::before {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>content: "";</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: fixed;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>top: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>left: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>height: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23a7f3d0' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>z-index: -1;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">*/</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-</body>
-</html>
+/* General Styles & Aloha Theme */
+body {
+    font-family: 'Inter', sans-serif; /* 기본 폰트 */
+    scroll-behavior: smooth;
+}
+
+.font-pacifico {
+    font-family: 'Pacifico', cursive; /* 헤더 제목 등 포인트 폰트 */
+}
+
+.section-title {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+    margin-bottom: 2.5rem; /* 40px */
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after { /* 섹션 제목 아래 장식선 */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #f59e0b; /* Amber 500 */
+    border-radius: 2px;
+}
+
+/* Header & Navigation */
+header nav a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem; /* rounded-md */
+}
+header nav a:hover, header nav a.active-nav { /* 현재 페이지 표시용 (JS로 추가 필요) */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section Animations (index.html) */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fadeInUp 1s ease-out 0.5s forwards; } /* 0.5s delay */
+
+@keyframes bounceSlow {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-15px);}
+  60% {transform: translateY(-7px);}
+}
+.animate-bounce-slow {
+    animation: bounceSlow 2s infinite 1s; /* 1s delay before starting */
+}
+
+
+/* Tropical Card Style (index.html) */
+.card-tropical {
+    background-color: #ffffff;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Ensures image corners are rounded */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-tropical:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.card-title-tropical {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600;
+    color: #0d9488; /* teal-700 */
+    margin-bottom: 0.75rem; /* 12px */
+}
+
+/* Itinerary Card Style (itinerary.html) */
+.card-tropical-itinerary {
+    background-color: #ffffff;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+.itinerary-day-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb; /* gray-200 */
+}
+.activity-options, .landmark-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f0fdfa; /* emerald-50 */
+    border-radius: 0.5rem; /* rounded-lg */
+    border-left: 4px solid #10b981; /* emerald-500 */
+}
+.landmark-info {
+    border-left-color: #3b82f6; /* blue-500 */
+    background-color: #eff6ff; /* blue-50 */
+}
+
+/* Food Card Style (food.html) */
+.card-food {
+    background-color: #fffbeb; /* amber-50 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.07), 0 3px 5px -2px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.card-food:hover {
+    transform: scale(1.03);
+}
+.food-image {
+    width: 100%;
+    height: 14rem; /* 224px */
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+.card-food:hover .food-image {
+    filter: brightness(1.1);
+}
+.food-title {
+    font-size: 1.375rem; /* 22px */
+    font-weight: 600;
+    color: #92400e; /* amber-800 */
+    margin-bottom: 0.5rem;
+}
+
+/* Tips & Culture Card Style (tips.html) */
+.tip-card {
+    background-color: #ecfdf5; /* green-50 */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-left: 5px solid #22c55e; /* green-500 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.tip-title {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+    color: #15803d; /* green-700 */
+    margin-bottom: 0.75rem;
+}
+.culture-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+.culture-card .tip-title { /* Reuse tip-title style */
+    color: #0d9488; /* teal-700 */
+}
+
+/* Footer */
+footer {
+    /* background-image: linear-gradient(to right, #0d9488, #0f766e); */ /* Teal gradient */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.875rem; /* 30px */
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        space-y-2;
+        space-x-0;
+    }
+    header nav li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Add a subtle tropical background pattern if desired, using CSS gradients or SVG */
+/* For example:
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23a7f3d0' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: -1;
+}
+*/
